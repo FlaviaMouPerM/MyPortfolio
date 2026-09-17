@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="pt-PT" data-theme="light" data-style="modern" data-lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flávia Martins | Portfólio Front-End</title>
+    <meta
+      name="description"
+      content="Portfólio profissional de Flávia Martins - Desenvolvedora Front-End em formação."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./src/styles/global.css" />
+    <link rel="stylesheet" href="./src/styles/modern.css" />
+    <link rel="stylesheet" href="./src/styles/retro.css" />
+  </head>
+  <body>
+    
+    <!-- Controles Globais de Troca -->
+
+    <header class="global-controls">
+      <div class="controls-wrapper">
+        <button
+          id="btn-portfolio-style"
+          class="control-btn"
+          aria-label="Alternar Estilo"
+        >
+          <span class="style-icon">🎨</span>
+          <span id="label-style">Estilo: Moderno</span>
+        </button>
+
+        <button
+          id="btn-theme-toggle"
+          class="control-btn"
+          aria-label="Alternar Tema"
+        >
+          <span id="theme-icon">☀️</span>
+          <span id="label-theme">Tema</span>
+        </button>
+
+        <button
+          id="btn-lang-toggle"
+          class="control-btn"
+          aria-label="Alternar Idioma"
+        >
+          <span class="lang-icon">🌐</span>
+          <span id="label-lang">PT</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="app-container">
+
+      <!-- PORTFÓLIO MODERNO -->
+
+      <div id="modern-portfolio" class="portfolio-view">
+        <nav class="modern-nav">
+          <div class="nav-brand">FM<span>.</span></div>
+          <ul class="nav-links">
+            <li><a href="#mod-about" data-i18n="navAbout">Sobre mim</a></li>
+            <li><a href="#mod-skills" data-i18n="navSkills">Skills</a></li>
+            <li>
+              <a href="#mod-projects" data-i18n="navProjects">Projetos</a>
+            </li>
+            <li>
+              <a href="#mod-experience" data-i18n="navExperience"
+                >Experiência</a
+              >
+            </li>
+            <li>
+              <a href="#mod-education" data-i18n="navEducation">Formação</a>
+            </li>
+            <li><a href="#mod-contact" data-i18n="navContact">Contato</a></li>
+          </ul>
+        </nav>
+
+        <section class="modern-hero">
+          <div class="hero-badge" data-i18n="heroBadge">
+            Estágio - Front-End Developer
+          </div>
+          <h1 class="hero-title">Flávia Martins</h1>
+          <p class="hero-subtitle" data-i18n="heroSubtitle">
+            Profissional analítica e focada em resultados, em transição de
+            carreira para o Desenvolvimento Web.
+          </p>
+          <div class="hero-cta">
+            <a href="#mod-contact" class="btn-primary" data-i18n="btnContact"
+              >Entrar em Contato</a
+            >
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener"
+              class="btn-secondary"
+              >GitHub</a
+            >
+          </div>
+        </section>
+
+        <section id="mod-about" class="modern-section">
+          <h2 class="section-title" data-i18n="aboutTitle">Sobre mim</h2>
+          <p class="modern-text" data-i18n="aboutText">
+            Histórico sólido em gestão de operações, forte capacidade de
+            concentração e entrega ("deep work"). Atualmente a concluir um CET
+            em Programação e a desenvolver projetos práticos através do The Odin
+            Project. Procuro um estágio onde possa aplicar meu pragmatismo e
+            resiliência na resolução de problemas.
+          </p>
+          <div class="info-pills">
+            <span class="pill">📍 Covilhã, Castelo Branco - Portugal</span>
+            <span class="pill">📧 flaviamourapmartins@gmail.com</span>
+            <span class="pill">📞 +351 910 257 785</span>
+          </div>
+        </section>
+
+        <section id="mod-skills" class="modern-section">
+          <h2 class="section-title" data-i18n="skillsTitle">
+            Skills & Tecnologias
+          </h2>
+          <div class="skills-grid">
+            <div class="skill-card">HTML5</div>
+            <div class="skill-card">CSS3</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">MySQL</div>
+            <div class="skill-card">Git / GitHub</div>
+            <div class="skill-card">Webpack</div>
+            <div class="skill-card">vite</div>
+            <div class="skill-card">APIs</div>
+            <div class="skill-card">React</div>
+            <div class="skill-card">Firebase</div>
+          </div>
+        </section>
+
+        <section id="mod-projects" class="modern-section">
+          <h2 class="section-title" data-i18n="projectsTitle">
+            Projetos Práticos
+          </h2>
+          <div class="projects-grid">
+            <div class="project-card">
+              <h3>Página de Restaurante Dinâmica</h3>
+              <p data-i18n="projRestDesc">
+                Aplicação web desenvolvida em Vanilla JS com manipulação do DOM
+                e código modular.
+              </p>
+              <div class="tech-tags">
+                <span>JS Vanilla</span><span>DOM</span><span>CSS Moderno</span>
+              </div>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener"
+                class="card-link"
+                data-i18n="viewGithub"
+                >Ver no GitHub →</a
+              >
+            </div>
+            <div class="project-card">
+              <h3>Tic-Tac-Toe</h3>
+              <p data-i18n="projTicDesc">
+                Jogo interativo focado na lógica de programação, gestão de
+                estado e arquitetura de módulos.
+              </p>
+              <div class="tech-tags">
+                <span>JavaScript</span><span>State Management</span>
+              </div>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener"
+                class="card-link"
+                data-i18n="viewGithub"
+                >Ver no GitHub →</a
+              >
+            </div>
+            <div class="project-card">
+              <h3>Library App</h3>
+              <p data-i18n="projLibDesc">
+                Gestão de biblioteca para adicionar, editar e remover livros
+                manipulando objetos e arrays.
+              </p>
+              <div class="tech-tags">
+                <span>JavaScript</span><span>DOM Dynamic</span>
+              </div>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener"
+                class="card-link"
+                data-i18n="viewGithub"
+                >Ver no GitHub →</a
+              >
+            </div>
+            <div class="project-card">
+              <h3>Todo List</h3>
+
+              <p data-i18n="projTodoDesc">
+                Aplicação Todo List desenvolvida em JavaScript, reforçando
+                manipulação do DOM, modularização, eventos e persistência de
+                dados. Projeto realizado em dupla para praticar GitHub e
+                desenvolvimento colaborativo em equipa.
+              </p>
+
+              <div class="tech-tags">
+                <span>HTML5</span><span>CSS3</span><span>JavaScript</span
+                ><span>DOM</span><span>GitHub</span>
+              </div>
+
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener"
+                class="card-link"
+                data-i18n="viewGithub"
+                >Ver no GitHub →</a
+              >
+            </div>
+            <div class="project-card">
+              <h3>Projetos Web Foundations</h3>
+              <p data-i18n="projFoundDesc">
+                Landing pages e páginas responsivas desenvolvidas do zero
+                reforçando semântica e flexbox/grid.
+              </p>
+              <div class="tech-tags">
+                <span>HTML5</span><span>CSS3</span><span>Flexbox</span>
+              </div>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener"
+                class="card-link"
+                data-i18n="viewGithub"
+                >Ver no GitHub →</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <section id="mod-experience" class="modern-section">
+          <h2 class="section-title" data-i18n="expTitle">
+            Experiência Profissional
+          </h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-date">2025</span>
+              <h3>Operadora de Produção / Costureira</h3>
+              <p class="company">Benolli Confecções | Portugal</p>
+              <p data-i18n="exp1Desc">
+                Execução de processos produtivos com foco no rigor, cumprimento
+                de prazos e resiliência operacional.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-date">2021 - 2024</span>
+              <h3>Atendimento e Produção / Costureira</h3>
+              <p class="company">
+                Lavanderia Linha D'água e filiais | Portugal
+              </p>
+              <p data-i18n="exp2Desc">
+                Atendimento direto ao cliente, cumprimento rigoroso de prazos e
+                execução detalhista em ambientes de alta exigência.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-date">2015 - 2020</span>
+              <h3>Assistente Administrativa e de Produção</h3>
+              <p class="company">Sofia e Bella Modas | Brasil</p>
+              <p data-i18n="exp3Desc">
+                Gestão de operações, coordenação de equipas externas, controlo
+                de faturação, pagamentos, compras e atendimento B2B.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="mod-education" class="modern-section">
+          <h2 class="section-title" data-i18n="eduTitle">Formação Académica</h2>
+          <div class="edu-grid">
+            <div class="edu-card">
+              <span class="edu-badge" data-i18n="eduBadge1"
+                >Previsão: Outubro 2026</span
+              >
+              <h3>CET em Programação</h3>
+              <p>Novotecna</p>
+              <p data-i18n="eduDesc1">
+                Foco prático em desenvolvimento de software e linguagens de
+                programação.
+              </p>
+            </div>
+            <div class="edu-card">
+              <span class="edu-badge" data-i18n="eduBadge2">2026</span>
+              <h3>Foundations & Full Stack JS</h3>
+              <p>The Odin Project</p>
+              <p data-i18n="eduDesc2">
+                Currículo autodidata rigoroso com foco na criação de projetos
+                práticos, Git e código limpo.
+              </p>
+            </div>
+            <div class="edu-card">
+              <span class="edu-badge">2025</span>
+              <h3>Desenvolvimento Web e Algoritmia</h3>
+              <p>CINEL</p>
+              <p data-i18n="eduDesc3">
+                Conceitos lógicos fundamentais e base do desenvolvimento de
+                programação web.
+              </p>
+            </div>
+            <div class="edu-card">
+              <span class="edu-badge">Em curso</span>
+              <h3>Full Stack JavaScript</h3>
+              <p>The Odin Project</p>
+              <p data-i18n="eduDesc3">
+                Formação em Full Stack JavaScript pelo The Odin Project.
+                Intermediate HTML and CSS concluído e JavaScript em progresso
+                (68%).atualmente estudando React através do The Odin Project e
+                de conteúdos complementares da Udemy
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="mod-contact" class="modern-section contact-section">
+          <h2 class="section-title" data-i18n="contactTitle">Contato</h2>
+          <p data-i18n="contactSub">
+            Interessado em um estágio ou em colaborar? Vamos conversar!
+          </p>
+          <a href="mailto:flaviamourapmartins@gmail.com" class="contact-email"
+            >flaviamourapmartins@gmail.com</a
+          >
+          <p>AI-assisted development: Este portfólio foi desenvolvido com auxílio de Inteligência Artificial. Os projetos apresentados foram desenvolvidos por mim, linha a linha, durante o meu processo de aprendizagem.</p>
+        </section>
+
+        <footer class="modern-footer">
+          <p>
+            Flávia Martins &copy; 2026.
+            <span data-i18n="footerText">Todos os direitos reservados.</span>
+          </p>
+          <p> processo de aprendizagem.</p>
+          <p>Este portfólio foi desenvolvido com apoio de ferramentas de Inteligência Artificial.</p>
+        </footer>
+      </div>
+
+      <!-- PORTFÓLIO RETRÔ (Inspirado no Design Visual)-->
+
+      <div id="retro-portfolio" class="portfolio-view">
+        <div class="retro-window-container">
+          <!-- Top Window Header Bar -->
+          <div class="retro-window-header">
+            <div class="retro-title-bar">[ Flávia Martins | Portfólio ]</div>
+            <div class="retro-window-controls">[ _ ] [ □ ] [ X ]</div>
+          </div>
+
+          <!-- Retro Navigation Menu -->
+          <nav class="retro-nav">
+            <a href="#ret-hero">[ Home ]</a>
+            <a href="#ret-about">[ Sobre mim ]</a>
+            <a href="#ret-projects">[ Projetos ]</a>
+            <a href="#ret-skills">[ Skills ]</a>
+            <a href="#ret-contact">[ Contato ]</a>
+            <span class="retro-status-blink"
+              >&gt; Coding... Loading dream..._</span
+            >
+          </nav>
+
+          <!-- Retro Main Body -->
+          <div class="retro-content">
+            <!-- Hero Retro Section -->
+            <section id="ret-hero" class="retro-section hero-retro-box">
+              <div class="retro-avatar-box">
+                <div class="pixel-avatar-frame">
+                  <span class="star-accent">★</span>
+                  <div class="pixel-portrait-placeholder"><img src="/src/assets/flavia.png" alt="Imagem Flavia" width="123"></div>
+                  <span class="star-accent">★</span>
+                </div>
+              </div>
+
+              <div class="retro-hero-info">
+                <h1 class="retro-headline">
+                  Olá, eu sou<br /><span class="highlight-cyan"
+                    >Flávia Martins</span
+                  >
+                </h1>
+                <p class="retro-subheadline" data-i18n="retroSub">
+                  Desenvolvedora Front-End em formação
+                  <span class="blink">█</span>
+                </p>
+                <p class="retro-desc" data-i18n="retroHeroDesc">
+                  Transformo ideias em interfaces.<br />
+                  Gosto de aprender, criar e evoluir.<br />
+                  Atualmente em busca da minha primeira oportunidade na área de
+                  TI.
+                </p>
+                <div class="retro-social-buttons">
+                  <a
+                    href="https://github.com"
+                    target="_blank"
+                    class="retro-btn-icon"
+                    aria-label="GitHub"
+                    >💻 GitHub</a
+                  >
+                  <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    class="retro-btn-icon"
+                    aria-label="LinkedIn"
+                    >🔗 LinkedIn</a
+                  >
+                  <a
+                    href="mailto:flaviamourapmartins@gmail.com"
+                    class="retro-btn-icon"
+                    aria-label="Email"
+                    >✉️ Email</a
+                  >
+                </div>
+              </div>
+
+              <div class="retro-monitor-graphic">
+                <div class="crt-screen">
+                  <p>&lt; code</p>
+                  <p>&nbsp; design</p>
+                  <p>&nbsp; progress</p>
+                  <p>/&gt;</p>
+                </div>
+                <p class="quote-text">
+                  "Grandes coisas também são construídas com pequenos passos."
+                </p>
+              </div>
+            </section>
+
+            <!-- About & Interests Window Section -->
+            <section id="ret-about" class="retro-section">
+              <div class="retro-grid-2col">
+                <div class="retro-card">
+                  <div class="card-header-icon">
+                    📁 <span data-i18n="aboutTitle">Sobre mim</span>
+                  </div>
+                  <p data-i18n="retroAboutText">
+                    Sou a Flávia Martins, moro em Portugal (Covilhã) e estou em
+                    transição para o desenvolvimento web. Tenho histórico sólido
+                    em gestão de operações e grande foco em resolução de
+                    problemas. Busco aprender continuamente e contribuir com
+                    projetos que façam a diferença.
+                  </p>
+                </div>
+
+                <div class="retro-mini-window">
+                  <div class="mini-window-header">
+                    <span>Meus interesses</span>
+                    <span>[ _ X ]</span>
+                  </div>
+                  <ul class="retro-list">
+                    <li>» Desenvolvimento Web</li>
+                    <li>» Design e Interface</li>
+                    <li>» Aprender idiomas</li>
+                    <li>» Algoritmia e Lógica</li>
+                    <li>» Resolução de Problemas</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="ret-projects" class="retro-section">
+              <div class="card-header-icon">
+                📁 <span data-i18n="projectsTitle">Projetos</span>
+              </div>
+              <p class="section-subtext" data-i18n="retroProjSub">
+                Aqui estão alguns dos projetos desenvolvidos durante a minha
+                formação:
+              </p>
+
+              <div class="retro-projects-grid">
+                <div class="retro-project-card">
+                  <div class="mock-window-top">
+                    <span>TODO</span>
+                    <span>[X]</span>
+                  </div>
+                  <h4>Página de Restaurante</h4>
+                  <p data-i18n="projRestDesc">
+                    Aplicação web desenvolvida com JavaScript Vanilla e
+                    manipulação do DOM modular.
+                  </p>
+                  <div class="retro-tags">HTML | CSS | JavaScript</div>
+                  <a
+                    href="https://github.com"
+                    target="_blank"
+                    class="retro-link"
+                    >Ver projeto →</a
+                  >
+                </div>
+
+                <div class="retro-project-card">
+                  <div class="mock-window-top">
+                    <span>GAME.EXE</span>
+                    <span>[X]</span>
+                  </div>
+                  <h4>Tic-Tac-Toe</h4>
+                  <p data-i18n="projTicDesc">
+                    Jogo da velha interativo focado na lógica de programação e
+                    manipulação de estado.
+                  </p>
+                  <div class="retro-tags">HTML | CSS | JavaScript</div>
+                  <a
+                    href="https://github.com"
+                    target="_blank"
+                    class="retro-link"
+                    >Ver projeto →</a
+                  >
+                </div>
+
+                <div class="retro-project-card">
+                  <div class="mock-window-top">
+                    <span>APP.SYS</span>
+                    <span>[X]</span>
+                  </div>
+                  <h4>Library App</h4>
+                  <p data-i18n="projLibDesc">
+                    Aplicação para gestão de biblioteca dinâmica com operações
+                    de livros.
+                  </p>
+                  <div class="retro-tags">HTML | CSS | JavaScript</div>
+                  <a
+                    href="https://github.com"
+                    target="_blank"
+                    class="retro-link"
+                    >Ver projeto →</a
+                  >
+                </div>
+
+                <div class="retro-project-card">
+                  <div class="mock-window-top">
+                    <span>WEB.DAT</span>
+                    <span>[X]</span>
+                  </div>
+                  <h4>Web Foundations</h4>
+                  <p data-i18n="projFoundDesc">
+                    Desenvolvimento de páginas web responsivas e landing pages
+                    do zero.
+                  </p>
+                  <div class="retro-tags">HTML | CSS | JavaScript</div>
+                  <a
+                    href="https://github.com"
+                    target="_blank"
+                    class="retro-link"
+                    >Ver projeto →</a
+                  >
+                </div>
+              </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="ret-skills" class="retro-section">
+              <div class="card-header-icon">
+                ★ <span data-i18n="skillsTitle">Skills</span>
+              </div>
+              <div class="retro-badges-flex">
+                <span class="retro-badge"
+                  ><strong class="badge-tag">HTML5</strong></span
+                >
+                <span class="retro-badge"
+                  ><strong class="badge-tag">CSS3</strong></span
+                >
+                <span class="retro-badge"
+                  ><strong class="badge-tag">JS</strong> JavaScript</span
+                >
+                <span class="retro-badge"
+                  ><strong class="badge-tag">Git</strong> & GitHub</span
+                >
+                <span class="retro-badge"
+                  ><strong class="badge-tag">SQL</strong> MySQL</span
+                >
+                <span class="retro-badge"
+                  ><strong class="badge-tag">React</strong></span
+                >
+              </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="ret-contact" class="retro-section retro-contact-box">
+              <div class="retro-contact-info">
+                <div class="card-header-icon">
+                  ✉️ <span data-i18n="retroContactTitle">Vamos conversar?</span>
+                </div>
+                <p data-i18n="retroContactSub">
+                  Em busca de uma oportunidade de estágio!
+                </p>
+                <ul class="contact-links-retro">
+                  <li>✉️ flaviamourapmartins@gmail.com</li>
+                  <li>📞 +351 910 257 785</li>
+                  <li>📍 Covilhã, Castelo Branco - Portugal</li>
+                </ul>
+              </div>
+              <div class="retro-laptop-box">
+                <div class="laptop-screen">
+                  Obrigado por visitar meu portfólio! ♥
+                </div>
+              </div>
+            </section>
+
+            <!-- Retro Footer -->
+            <footer class="retro-footer">
+              <p>Flávia Martins &copy; 2026 | Feito com ♥ e muito código</p>
+              <p>Este portfólio foi desenvolvido com apoio de ferramentas de Inteligência Artificial.</p>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

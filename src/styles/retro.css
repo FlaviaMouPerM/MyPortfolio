@@ -1,0 +1,745 @@
+
+/* PORTFÓLIO RETRÔ                            */
+
+/* PALETA RETRÔ                               */
+
+[data-theme="light"] {
+  --retro-page: #d7d9dc;
+  --retro-window: #080b0c;
+  --retro-panel: #0b1011;
+
+  --retro-green: #00ffd5;
+  --retro-cyan: #00e5ff;
+
+  --retro-yellow: #ffe44f;
+  --retro-purple: #6655ff;
+  --retro-pink: #ff3d81;
+  --retro-blue: #4da3ff;
+
+  --retro-white: #d9fffa;
+
+  --retro-dark-border: #064f48;
+}
+
+
+[data-theme="dark"] {
+  --retro-page: #000203;
+  --retro-window: #020506;
+  --retro-panel: #05090a;
+
+  --retro-green: #00ffd5;
+  --retro-cyan: #00e5ff;
+
+  --retro-yellow: #ffe44f;
+  --retro-purple: #6655ff;
+  --retro-pink: #ff3d81;
+  --retro-blue: #4da3ff;
+
+  --retro-white: #d9fffa;
+
+  --retro-dark-border: #006b60;
+}
+
+/* PÁGINA                                     */
+
+#retro-portfolio {
+
+  min-height: 100vh;
+  padding: 4rem 1rem 2rem;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(0, 255, 213, 0.04),
+      transparent 40%
+    ),
+    var(--retro-page);
+
+  color: var(--retro-white);
+  font-family: var(--font-retro-body);
+  font-size: 1.25rem;
+}
+
+/* GRANDE JANELA                              */
+
+
+.retro-window-container {
+
+  max-width: 1050px;
+  margin: 0 auto;
+  background: var(--retro-window);
+  border: 2px solid var(--retro-green);
+  box-shadow:
+    8px 8px 0 rgba(0, 0, 0, 0.45),
+    0 0 25px rgba(0, 255, 213, 0.08);
+}
+
+/* BARRA SUPERIOR                             */
+
+.retro-window-header {
+
+  min-height: 40px;
+  padding: 0.45rem 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:
+    linear-gradient(
+      90deg,
+      #141a31,
+      #271b55,
+      #11172c
+    );
+
+  color: white;
+  border-bottom: 2px solid var(--retro-green);
+  font-family: var(--font-retro-title);
+  font-size: 0.65rem;
+}
+
+/* Título */
+
+.retro-title-bar {
+  color: white;
+}
+
+/* Botões da janela */
+
+.retro-window-controls {
+
+  color: var(--retro-white);
+  letter-spacing: 0.15rem;
+  font-size: 0.65rem;
+}
+
+/* NAVEGAÇÃO                                  */
+
+.retro-nav {
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0.7rem 1rem;
+  background: #020405;
+  border-bottom: 1px solid var(--retro-dark-border);
+}
+
+
+.retro-nav a {
+
+  color: var(--retro-green);
+  text-decoration: none;
+  font-weight: bold;
+  transition:
+    color 0.15s ease,
+    background 0.15s ease;
+}
+
+
+.retro-nav a:hover {
+
+  color: #000;
+  background: var(--retro-green);
+  padding: 0 0.2rem;
+}
+
+/* STATUS                                     */
+
+.retro-status-blink {
+
+  margin-left: auto;
+  color: var(--retro-green);
+  font-size: 0.9rem;
+  animation: retro-blink 1.2s steps(1) infinite;
+}
+
+
+@keyframes retro-blink {
+
+  0%,
+  45% {
+    opacity: 1;
+  }
+
+  46%,
+  100% {
+    opacity: 0.35;
+  }
+}
+
+/* CONTEÚDO                                   *
+
+.retro-content {
+
+  padding: 1.2rem;
+}
+
+/* SEÇÕES                                     */
+
+.retro-section {
+
+  position: relative;
+  padding: 1.4rem;
+  margin-bottom: 1.2rem;
+  background: var(--retro-panel);
+  border: 1px solid var(--retro-dark-border);
+  overflow: hidden;
+}
+
+/* Pequeno detalhe no canto */
+
+.retro-section::after {
+
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 35px;
+  height: 35px;
+  border-right: 2px solid var(--retro-green);
+  border-bottom: 2px solid var(--retro-green);
+  opacity: 0.5;
+}
+
+
+/* HERO                                       */
+
+.hero-retro-box {
+
+  display: grid;
+
+  grid-template-columns:
+    190px
+    1fr
+    210px;
+
+  gap: 1.5rem;
+
+  align-items: center;
+  min-height: 320px;
+}
+
+/* FOTO / AVATAR                              */
+
+.pixel-avatar-frame {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0.8rem;
+  border: 2px solid var(--retro-green);
+  background: #020304;
+  box-shadow:
+    5px 5px 0 rgba(0, 255, 213, 0.12);
+}
+
+
+.pixel-portrait-placeholder {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 150px;
+  height: 180px;
+
+  font-size: 5rem;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 255, 213, 0.04) 0,
+      rgba(0, 255, 213, 0.04) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+
+  border: 1px solid var(--retro-dark-border);
+}
+
+
+/* Estrelas */
+
+.star-accent {
+
+  position: absolute;
+  color: var(--retro-yellow);
+  font-size: 1rem;
+}
+
+.star-accent:first-child {
+  top: 5px;
+  left: 8px;
+}
+
+.star-accent:last-child {
+  top: 5px;
+  right: 8px;
+}
+
+/* HERO TEXTO                                 */
+
+.retro-headline {
+
+  font-family: var(--font-retro-title);
+  font-size: 1.35rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+
+.highlight-cyan {
+
+  color: var(--retro-green);
+  font-family: var(--font-retro-title);
+  font-size: 1.7rem;
+  text-shadow:
+    0 0 8px rgba(0, 255, 213, 0.3);
+}
+
+
+.retro-subheadline {
+
+  color: var(--retro-cyan);
+  margin-bottom: 1rem;
+}
+
+
+.retro-desc {
+
+  color: var(--retro-white);
+  line-height: 1.4;
+  font-size: 1.1rem;
+}
+
+/* BOTÕES SOCIAIS                             */
+
+.retro-btn-icon {
+
+  display: inline-block;
+  border: 1px solid var(--retro-green);
+  padding: 0.35rem 0.55rem;
+  color: var(--retro-green);
+  text-decoration: none;
+  margin-right: 0.4rem;
+  margin-top: 0.7rem;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+
+.retro-btn-icon:hover {
+
+  background: var(--retro-green);
+  color: #000;
+  transform: translateY(-2px);
+}
+
+/* MONITOR CRT                                */
+
+.crt-screen {
+
+  position: relative;
+  background: #000;
+  border: 2px solid var(--retro-green);
+  padding: 1rem;
+  color: var(--retro-green);
+  font-family: monospace;
+  min-height: 130px;
+  box-shadow:
+    inset 0 0 20px rgba(0, 255, 213, 0.05);
+}
+
+
+/* Scanlines */
+
+.crt-screen::after {
+
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 3px,
+      rgba(0, 255, 213, 0.035) 4px
+    );
+}
+
+
+/* Cursor */
+
+.crt-screen p:last-child {
+
+  animation: cursor-blink 1s steps(1) infinite;
+}
+
+
+@keyframes cursor-blink {
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/* Citação */
+
+.quote-text {
+
+  color: var(--retro-green);
+  font-size: 0.85rem;
+  margin-top: 0.8rem;
+  font-style: italic;
+  text-align: center;
+}
+
+/* CABEÇALHOS DAS SEÇÕES                     */
+
+.card-header-icon {
+
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  color: var(--retro-yellow);
+  font-family: var(--font-retro-title);
+  font-size: 1rem;
+}
+
+/* SOBRE / INTERESSES                        */
+
+.retro-grid-2col {
+
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1rem;
+}
+
+
+.retro-card {
+
+  padding: 1rem;
+  border-left: 3px solid var(--retro-green);
+  background: #020506;
+}
+
+
+.retro-card p {
+
+  line-height: 1.5;
+  color: var(--retro-white);
+}
+
+/* MINI JANELA                                */
+
+.retro-mini-window {
+
+  border: 1px solid var(--retro-cyan);
+  background: #020304;
+}
+
+
+.mini-window-header {
+
+  background:
+    linear-gradient(
+      90deg,
+      #251d69,
+      #3c2480
+    );
+
+  color: white;
+  padding: 0.3rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+
+.retro-list {
+
+  list-style: none;
+  padding: 0.7rem;
+}
+
+
+.retro-list li {
+
+  padding: 0.2rem 0;
+  color: var(--retro-white);
+}
+
+
+.retro-list li::first-letter {
+  color: var(--retro-green);
+}
+
+/* PROJETOS                                   */
+
+.retro-projects-grid {
+
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+
+.retro-project-card {
+
+  position: relative;
+  border: 1px solid var(--retro-dark-border);
+  padding: 0.9rem;
+  background: #020405;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.retro-project-card:hover {
+
+  transform: translateY(-4px);
+  border-color: var(--retro-green);
+  box-shadow:
+    4px 4px 0 rgba(0, 255, 213, 0.12);
+}
+
+
+/* Barra superior das mini janelas */
+
+.mock-window-top {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.7rem;
+  border-bottom: 1px solid var(--retro-dark-border);
+  color: var(--retro-cyan);
+  font-size: 0.8rem;
+}
+
+
+.retro-project-card h4 {
+
+  color: var(--retro-green);
+  margin-bottom: 0.5rem;
+}
+
+
+.retro-project-card p {
+
+  color: var(--retro-white);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+
+/* Tags */
+
+.retro-tags {
+
+  margin-top: 0.8rem;
+  color: var(--retro-yellow);
+  font-size: 0.85rem;
+}
+
+
+/* Link */
+
+.retro-link {
+
+  display: inline-block;
+  color: var(--retro-green);
+  margin-top: 0.7rem;
+
+  transition:
+    transform 0.15s ease,
+    color 0.15s ease;
+}
+
+
+.retro-link:hover {
+
+  color: var(--retro-cyan);
+  transform: translateX(4px);
+}
+
+
+/* SKILLS                                     */
+
+.retro-badges-flex {
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+
+.retro-badge {
+
+  border: 1px solid var(--retro-dark-border);
+  padding: 0.45rem 0.7rem;
+  background: #020405;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.retro-badge:hover {
+
+  border-color: var(--retro-green);
+  transform: translateY(-3px);
+}
+
+
+.badge-tag {
+
+  background: var(--retro-green);
+  color: #000;
+  padding: 0 0.3rem;
+  margin-right: 0.2rem;
+}
+
+
+/* CONTACTO                                   */
+
+.retro-contact-box {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+
+.contact-links-retro {
+
+  list-style: none;
+  margin-top: 1rem;
+}
+
+
+.contact-links-retro li {
+
+  margin-bottom: 0.4rem;
+  color: var(--retro-white);
+}
+.blink {
+  animation: blink 1s infinite;
+}
+
+/* LAPTOP                                     */
+
+.laptop-screen {
+
+  min-width: 220px;
+  padding: 1.5rem;
+  background: #000;
+  color: var(--retro-green);
+  text-align: center;
+  border: 3px solid var(--retro-dark-border);
+
+  box-shadow:
+    6px 6px 0 rgba(0, 255, 213, 0.08);
+
+  animation: laptop-glow 3s ease-in-out infinite;
+}
+
+
+@keyframes laptop-glow {
+
+  0%,
+  100% {
+    box-shadow:
+      6px 6px 0 rgba(0, 255, 213, 0.08);
+  }
+
+  50% {
+    box-shadow:
+      6px 6px 0 rgba(0, 255, 213, 0.16);
+  }
+  
+}
+
+
+/* FOOTER                                     */
+
+.retro-footer {
+  text-align: center;
+  border-top: 1px solid var(--retro-dark-border);
+  padding-top: 1rem;
+  color: var(--retro-green);
+  font-size: 0.9rem;
+}
+
+
+/* RESPONSIVO                                 */
+
+@media (max-width: 850px) {
+
+  .hero-retro-box {
+
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .pixel-avatar-frame {
+
+    max-width: 190px;
+    margin: 0 auto;
+  }
+
+  .retro-grid-2col {
+
+    grid-template-columns: 1fr;
+  }
+
+  .retro-contact-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .retro-status-blink {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .retro-status-blink,
+  .crt-screen p:last-child,
+  .laptop-screen {
+
+    animation: none;
+  }
+}
