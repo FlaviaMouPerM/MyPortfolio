@@ -135,36 +135,30 @@
   position: relative;
   padding: 6rem 0 7rem;
   max-width: 900px;
+   
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   background:
+    radial-gradient(
+      circle at 50% 20%,
+      rgba(0, 255, 213, 0.08),
+      transparent 45%
+    ),
+    linear-gradient(
+      135deg,
+      #050505 0%,
+      #0b0b0b 50%,
+      #020202 100%
+    );
+
+
 }
 
 
 /* Pequeno detalhe colorido */
 
-.modern-hero::before {
-  content: "";
-
-  position: absolute;
-
-  top: 3rem;
-  left: -2rem;
-  width: 100px;
-  height: 100px;
-
-  background: linear-gradient(
-    135deg,
-    rgba(79, 109, 245, 0.12),
-    rgba(232, 106, 167, 0.08)
-  );
-
-  border-radius: 50%;
-  filter: blur(2px);
-
-  z-index: 0;
-}
 
 
 /* Badge */
@@ -237,6 +231,7 @@
   display: flex;
   gap: 0.8rem;
   flex-wrap: wrap;
+  
 }
 
 
@@ -246,7 +241,7 @@
   align-items: center;
   justify-content: center;
   padding: 0.75rem 1.2rem;
-
+ 
   border-radius: 10px;
   font-size: 0.9rem;
   font-weight: 600;
@@ -584,8 +579,24 @@
 .contact-section {
   text-align: center;
   padding: 7rem 0;
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(0, 255, 213, 0.06),
+      transparent 50%
+    ),
+    linear-gradient(
+      135deg,
+      #030303,
+      #0c0c0c,
+      #020202
+    );
+    color: #b1acac;
 }
-
+.ai-assisted{
+  margin: 15px;
+  font-size: small;
+}
 
 .contact-email {
   display: inline-block;

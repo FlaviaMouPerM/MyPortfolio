@@ -1,64 +1,9 @@
-
-/* VARIÁVEIS E RESET GLOBAL                   */
-
-
 :root {
-  --font-modern: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-modern: 'Inter', system-ui, sans-serif;
   --font-retro-title: 'Press Start 2P', monospace;
   --font-retro-body: 'VT323', monospace;
   --transition-speed: 0.3s;
 }
-
-/* MODO CLARO                                 */
-
-
-[data-theme="light"] {
-  --bg-primary: #D9FFFA;
-  --bg-secondary: #A8D9D3;
-
-  --text-primary: #000203;
-  --text-secondary: #164A43;
-
-  --border-color: #00A88F;
-
-  --accent-color: #00A88F;
-  --accent-hover: #007F70;
-
-  /* Retro Theme Light Variations */
-  --retro-bg: #D9FFFA;
-  --retro-window-bg: #A8D9D3;
-  --retro-text: #000203;
-  --retro-cyan: #00A88F;
-  --retro-border: #000203;
-  --retro-header-bg: #00A88F;
-}
-
-/* MODO ESCURO                                */
-
-
-[data-theme="dark"] {
-  --bg-primary: #000203;
-  --bg-secondary: #05090A;
-
-  --text-primary: #D9FFFA;
-  --text-secondary: #A8D9D3;
-
-  --border-color: #00FFD5;
-
-  --accent-color: #00FFD5;
-  --accent-hover: #00E5FF;
-
-  /* Retro Theme Dark Variations */
-  --retro-bg: #000203;
-  --retro-window-bg: #05090A;
-  --retro-text: #00FFD5;
-  --retro-cyan: #00E5FF;
-  --retro-border: #00FFD5;
-  --retro-header-bg: #006B60;
-}
-
-/* RESET GLOBAL                               */
-
 
 * {
   box-sizing: border-box;
@@ -66,25 +11,33 @@
   padding: 0;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
 
-
 body {
-  background-color: var(--bg-primary);
+  background: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-modern);
   line-height: 1.6;
-
-  transition:
-    background-color var(--transition-speed),
-    color var(--transition-speed);
+  transition: background var(--transition-speed), color var(--transition-speed);
 }
 
-/* BARRA DE CONTROLES GLOBAL                  */
+/* TEMAS */
 
+[data-theme="light"] {
+  --bg-primary: #f7f7f5;
+  --text-primary: #17181c;
+  --accent-color: #4f6df5;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #08090c;
+  --text-primary: #f5f7fa;
+  --accent-color: #7890ff;
+}
+
+/* CONTROLES */
 
 .global-controls {
   position: fixed;
@@ -93,273 +46,44 @@ body {
   z-index: 9999;
 }
 
-
 .controls-wrapper {
   display: flex;
   gap: 0.5rem;
-
-  background: var(--bg-secondary);
-  padding: 0.5rem;
-
-  border: 1px solid var(--border-color);
-  border-radius: 30px;
-
-  box-shadow: 0 0 8px rgba(0, 255, 213, 0.35);
 }
 
-
 .control-btn {
-  background: transparent;
-  border: none;
-
-  color: var(--text-primary);
-
-  padding: 0.4rem 0.8rem;
-
-  font-size: 0.85rem;
-  font-weight: 600;
-
-  cursor: pointer;
-  border-radius: 20px;
-
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-
-  transition: background 0.2s;
-}
-
-
-.control-btn:hover {
-  background: var(--border-color);
-}
-
-/* VIEWS                                      */
-
-
-.portfolio-view {
-  display: none;
-  opacity: 0;
- 
-  transition: opacity 0.4s ease-in-out;
-}
-
-
-[data-style="modern"] #modern-portfolio {
-  display: block;
-  opacity: 1;
-}
-
-
-[data-style="retro"] #retro-portfolio {
-  display: block;
-  opacity: 1;
-}
-
-/* ACESSIBILIDADE — REDUZIR MOVIMENTO        */
-
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  ::before,
-  ::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-/* EFEITOS HOVER — RETRO PORTFOLIO            */
-
-/* 1. Links                      */
-
-
-a {
-  color: var(--accent-color);
-  transition:
-    color 0.2s ease,
-    text-shadow 0.2s ease;
-}
-
-a:hover {
-  color: var(--accent-hover);
-
-  text-shadow:
-    0 0 5px rgba(0, 255, 213, 0.5),
-    0 0 10px rgba(0, 255, 213, 0.3);
-}
-
-/* 2. Botões                     */
-
-
-.control-btn {
-  transition:
-    background 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  background: #4968f5;
+  color: var(--text-primary);
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.15s, box-shadow 0.2s;
 }
 
 .control-btn:hover {
   background: var(--accent-color);
   color: var(--bg-primary);
-
   transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* 3. Cards dos projetos         */
+/* VIEWS */
 
-
-.project-card {
-  transition:
-    transform 0.25s ease,
-    border-color 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-
-  border-color: var(--accent-color);
-
-  box-shadow:
-    0 0 8px rgba(0, 255, 213, 0.25),
-    0 0 20px rgba(0, 255, 213, 0.12);
-}
-
-/* 4. Imagens dos projetos       */
-
-
-.project-card img {
-  transition:
-    transform 0.3s ease,
-    filter 0.3s ease;
-}
-
-.project-card:hover img {
-  transform: scale(1.03);
-
-  filter:
-    brightness(1.1)
-    contrast(1.05);
-}
-
-/* 5. Skills                     */
-
-
-.skill {
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.skill:hover {
-  transform: translateY(-3px);
-
-  border-color: var(--accent-color);
-
-  box-shadow:
-    0 0 8px rgba(0, 255, 213, 0.25);
-}
-
-/* 6. Ícones                     */
-
-
-.social-icon {
-  transition:
-    transform 0.2s ease,
-    color 0.2s ease,
-    text-shadow 0.2s ease;
-}
-
-.social-icon:hover {
-  transform: scale(1.12);
-
-  color: var(--cyan);
-
-  text-shadow:
-    0 0 5px rgba(0, 229, 255, 0.6);
-}
-
-/* 7. Títulos                    */
-
-
-h1,
-h2,
-h3 {
-  transition:
-    text-shadow 0.25s ease;
-}
-
-h1:hover,
-h2:hover,
-h3:hover {
-  text-shadow:
-    0 0 5px rgba(0, 255, 213, 0.5),
-    0 0 12px rgba(0, 255, 213, 0.25);
-}
-
-/* 8. Efeito cursor retrô        */
-
-.retro-link {
-  position: relative;
-}
-
-.retro-link::after {
-  content: "_";
-
+.portfolio-view {
+  display: none;
   opacity: 0;
-
-  margin-left: 3px;
-
-  transition: opacity 0.2s ease;
+  transition: opacity 0.4s ease;
 }
 
-.retro-link:hover::after {
+[data-style="modern"] #modern-portfolio,
+[data-style="retro"] #retro-portfolio {
+  display: block;
   opacity: 1;
-}
-
-/* 9. Botão "Ver projeto"        */
-
-.project-link {
-  display: inline-block;
-
-  transition:
-    transform 0.2s ease,
-    color 0.2s ease;
-}
-
-.project-link:hover {
-  transform: translateX(5px);
-
-  color: var(--cyan);
-}
-
-/* 10. Janela retrô              */
-
-.retro-window {
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.retro-window:hover {
-  transform: translateY(-3px);
-
-  box-shadow:
-    0 0 10px rgba(0, 255, 213, 0.2);
-}
-
-/* ACESSIBILIDADE                             */
-
-@media (prefers-reduced-motion: reduce) {
-  .project-card,
-  .project-card img,
-  .skill,
-  .social-icon,
-  .retro-window,
-  .project-link,
-  .control-btn {
-    transition: none;
-    transform: none;
-  }
 }
