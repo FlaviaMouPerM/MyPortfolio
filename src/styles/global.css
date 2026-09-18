@@ -5,15 +5,8 @@
   --transition-speed: 0.3s;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 
 body {
   background: var(--bg-primary);
@@ -23,50 +16,27 @@ body {
   transition: background var(--transition-speed), color var(--transition-speed);
 }
 
-/* TEMAS */
+[data-theme="light"] { --bg-primary: #f7f7f5; --text-primary: #17181c; --accent-color: #4f6df5; }
+[data-theme="dark"]  { --bg-primary: #08090c; --text-primary: #f5f7fa; --accent-color: #7890ff; }
 
-[data-theme="light"] {
-  --bg-primary: #f7f7f5;
-  --text-primary: #17181c;
-  --accent-color: #4f6df5;
-}
-
-[data-theme="dark"] {
-  --bg-primary: #08090c;
-  --text-primary: #f5f7fa;
-  --accent-color: #7890ff;
-}
-
-/* CONTROLES */
-
-.global-controls {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  z-index: 9999;
-}
-
-.controls-wrapper {
-  display: flex;
-  gap: 0.5rem;
-}
+.global-controls { position: fixed; top: 1rem; right: 1rem; z-index: 9999; }
+.controls-wrapper { display: flex; gap: 0.5rem; }
 
 .control-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   padding: 0.45rem 0.8rem;
-  border: 1px solid currentColor;
-  border-radius: 6px;
   background: #4968f5;
   color: var(--text-primary);
+  border: 1px solid currentColor;
+  border-radius: 6px;
   font: inherit;
   font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s, color 0.2s, transform 0.15s, box-shadow 0.2s;
 }
-
 .control-btn:hover {
   background: var(--accent-color);
   color: var(--bg-primary);
@@ -74,16 +44,6 @@ body {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* VIEWS */
-
-.portfolio-view {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
+.portfolio-view { display: none; opacity: 0; transition: opacity 0.4s ease; }
 [data-style="modern"] #modern-portfolio,
-[data-style="retro"] #retro-portfolio {
-  display: block;
-  opacity: 1;
-}
+[data-style="retro"] #retro-portfolio { display: block; opacity: 1; }
