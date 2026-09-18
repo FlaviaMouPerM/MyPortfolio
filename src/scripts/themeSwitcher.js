@@ -1,19 +1,19 @@
-export function initPortfolioSwitcher() {
-  const styleBtn = document.getElementById('btn-portfolio-style');
-  const labelStyle = document.getElementById('label-style');
+export function initThemeSwitcher() {
+  const themeBtn = document.getElementById('btn-theme-toggle');
+  const themeIcon = document.getElementById('theme-icon');
+  
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  applyTheme(savedTheme);
 
-  const savedStyle = localStorage.getItem('portfolioStyle') || 'modern';
-  applyStyle(savedStyle);
-
-  styleBtn.addEventListener('click', () => {
-    const currentStyle = document.documentElement.getAttribute('data-style');
-    const newStyle = currentStyle === 'modern' ? 'retro' : 'modern';
-    applyStyle(newStyle);
-    localStorage.setItem('portfolioStyle', newStyle);
+  themeBtn.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    applyTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
   });
 
-  function applyStyle(style) {
-    document.documentElement.setAttribute('data-style', style);
-    labelStyle.textContent = style === 'modern' ? 'Estilo: Moderno' : 'Estilo: Retrô';
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    themeIcon.textContent = theme === 'light' ? '☀️' : '🌙';
   }
 }
